@@ -1,18 +1,20 @@
 import math
 import cmath
 
+
 def quadratic_func(a, b, c):
     try:
+
         lst = [a, b, c]
         if all(isinstance(n, int) for n in lst) or all(isinstance(n, float) for n in lst):
             disc = b * b - 4 * a * c
-            
+
             if a != 0:
 
                 if disc == 0:
                     x1 = (-b + math.sqrt(disc)) / (2 * a)
                     return (x1,)
-                elif disc>0:
+                elif disc > 0:
                     x1 = (-b + math.sqrt(disc)) / (2 * a)
                     x2 = (-b - math.sqrt(disc)) / (2 * a)
                     return x1, x2
@@ -26,11 +28,7 @@ def quadratic_func(a, b, c):
         else:
             return -1
     except ValueError or TypeError:
-            return lst
+        return lst
 
 
-# print(quadratic_func(1,None, 1))
-
-
-
-
+# print(quadratic_func(1,-4, 8))

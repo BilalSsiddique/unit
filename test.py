@@ -20,6 +20,10 @@ class Tests(unittest.TestCase):
         result = -1  # test_case for checking None
         self.assertEqual(result, quadratic_func(1, None, 1))
 
+    def test_5(self):
+        result = ((2+2j), (2-2j))  # checking answer for complex numbers
+        self.assertEqual(result, quadratic_func(1, -4, 8))
+
 
 if __name__ == '__main__':
     unittest.main()
